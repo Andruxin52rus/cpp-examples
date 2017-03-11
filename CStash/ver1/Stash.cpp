@@ -9,8 +9,7 @@ void Stash::initialize(int size) {
 	this->size = size;
 	this->quantity = 0;
 	this->next = 0;
-	//this->storage = 0;
-	vector<char> storage;
+	this->storage = 0;
 }
 
 int Stash::add(const void* element) {
