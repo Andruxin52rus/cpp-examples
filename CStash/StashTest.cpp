@@ -14,7 +14,7 @@ int main() {
 		cout << "intStash.fetch(" << j << ") = "
 		<< *(int*)intStash.fetch(j)
 		<< endl;
-	// Ñòğîêè èç 80 ñèìâîëîâ:
+	// Ã‘Ã²Ã°Ã®ÃªÃ¨ Ã¨Ã§ 80 Ã±Ã¨Ã¬Ã¢Ã®Ã«Ã®Ã¢:
 	Stash stringStash;
 	const int bufsize = 80;
 	stringStash.initialize(sizeof(char) * bufsize);
