@@ -9,10 +9,10 @@ void test1() {
 	Stack textlines;
 	textlines.initialize();
 	string line;
-	// Чтение файла и сохранение строк в стеке:
+	// Г—ГІГҐГ­ГЁГҐ ГґГ Г©Г«Г  ГЁ Г±Г®ГµГ°Г Г­ГҐГ­ГЁГҐ Г±ГІГ°Г®ГЄ Гў Г±ГІГҐГЄГҐ:
 	while (getline(in, line))
 		textlines.push(new string(line));
-	// Извлечение строк из стека и вывод:
+	// Г€Г§ГўГ«ГҐГ·ГҐГ­ГЁГҐ Г±ГІГ°Г®ГЄ ГЁГ§ Г±ГІГҐГЄГ  ГЁ ГўГ»ГўГ®Г¤:
 	string* s;
 	while ((s = (string*)textlines.pop()) != 0) {
 		cout << *s << endl;
