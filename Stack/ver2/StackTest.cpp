@@ -40,7 +40,39 @@ void test2() {
 	cout << "Count: " << st.count() << endl;
 }
 
+void test3() {
+	Stack st;
+	string str[] = { "str1", "str22", "str333" };
+	for (int i = 0; i < sizeof(str) / sizeof(*str); i++) {
+		st.push(new string(str[i]));
+	}
+	while (st.count())
+	{
+		cout << *(string*)st.pop() << endl;
+	}
+}
+
+void test4() {
+	string str[] = { "str1", "str22", "str333" };
+	long long length = sizeof(str) / sizeof(*str);
+	void** ptrs = new void* [length];
+	for (long long i = 0; i < length; i++) {
+		ptrs[i] = new string(str[i]);
+	}
+	Stack st(ptrs, length);
+
+	while (st.count())
+	{
+		cout << *(string*)st.pop() << endl;
+	}
+
+	for (long long i = 0; i < length; i++) {
+		delete[] ptrs[i];
+	}
+	delete[] ptrs;
+}
+
 int main() {
-	test2();
+	test4();
 	system("pause");
 }
