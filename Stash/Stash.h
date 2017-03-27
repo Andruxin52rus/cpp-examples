@@ -7,7 +7,7 @@ private:
 	long long next;
 	void inflate(unsigned int increment);
 public:
-	Stash(char element_size);
+	Stash(char element_size, long long quantity = 0);
 	~Stash();
 	long long add(void* element);
 	void* fetch(long long index);
