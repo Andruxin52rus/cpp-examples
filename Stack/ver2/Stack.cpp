@@ -3,6 +3,13 @@
 
 Stack::Stack() : head(0), peak(0) { }
 
+Stack::Stack(void** data_pointers, long long length) {
+	Stack();
+	for (long long i = 0; i < length; i++) {
+		push(data_pointers[i]);
+	}
+}
+
 Stack::~Stack() {
 	node* current = head;
 	node* next = 0;
