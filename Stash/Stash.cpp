@@ -1,9 +1,9 @@
 #include "Stash.h"
 #include <cassert>
 
-Stash::Stash(char element_size) {
+Stash::Stash(char element_size, long long quantity) {
 	this->element_size = element_size;
-	this->quantity = 10;
+	this->quantity = quantity;
 	this->next = 0;
 	this->storage = new char[this->quantity * this->element_size];
 }
